@@ -1,0 +1,5 @@
+connect to db = 'mongod --dbpath C:/mongodata';
+
+git ignore initialize = 'touch .gitignore && echo "node_modules/" >> .gitignore';
+
+add to git ignore = 'echo "name_of_file/folder" >> .gitignore';

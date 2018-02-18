@@ -28,5 +28,6 @@
     "mongoose": "^5.0.6"
   },
   "devDependencies": {
+    "@angular/cli": "^1.7.0"
   }
 }
