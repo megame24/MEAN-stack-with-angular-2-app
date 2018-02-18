@@ -1,0 +1,32 @@
+{
+  "name": "mean-angular-2-app",
+  "version": "1.0.0",
+  "description": "MEAN stack with angular 2",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/megame24/MEAN-stack-with-angular-2-app.git"
+  },
+  "keywords": [
+    "MEAN",
+    "Stack",
+    "Angular",
+    "2",
+    "Application"
+  ],
+  "author": "Innocent Ngene",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/megame24/MEAN-stack-with-angular-2-app/issues"
+  },
+  "homepage": "https://github.com/megame24/MEAN-stack-with-angular-2-app#readme",
+  "dependencies": {
+    "express": "^4.16.2",
+    "mongoose": "^5.0.6"
+  },
+  "devDependencies": {
+  }
+}
