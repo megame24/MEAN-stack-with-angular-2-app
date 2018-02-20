@@ -47,7 +47,7 @@ const usernameValidators = [
   },
   {
     validator: validUsername,
-    message: 'invalid username, choose another username'
+    message: 'username must not have any special character'
   }
 ]
 
