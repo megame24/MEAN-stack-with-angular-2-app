@@ -1,8 +1,9 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { HttpModule } from '@angular/http';
 import { ReactiveFormsModule } from '@angular/forms';
 import { AppRoutingModule } from './app-routing-module';
-import * as $ from 'jquery'; //copy into required component.ts and get the ts*type for jquery on line
+// import * as $ from 'jquery'; //copy into required component.ts and get the ts*type for jquery on line
 // import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 
@@ -13,6 +14,9 @@ import { HomeComponent } from './components/home/home.component';
 import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { RegisterComponent } from './components/register/register.component';
 
+import { AuthService } from './services/auth.service';
+import { LoginComponent } from './components/login/login.component';
+
 
 @NgModule({
   declarations: [
@@ -20,15 +24,17 @@ import { RegisterComponent } from './components/register/register.component';
     NavbarComponent,
     HomeComponent,
     DashboardComponent,
-    RegisterComponent
+    RegisterComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
+    HttpModule,
     AppRoutingModule,
     ReactiveFormsModule
     // NgbModule.forRoot()
   ],
-  providers: [],
+  providers: [AuthService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
