@@ -6,16 +6,15 @@ import { AppRoutingModule } from './app-routing-module';
 // import * as $ from 'jquery'; //copy into required component.ts and get the ts*type for jquery on line
 // import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
-
+import { AuthService } from './services/auth.service';
 
 import { AppComponent } from './app.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { HomeComponent } from './components/home/home.component';
 import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { RegisterComponent } from './components/register/register.component';
-
-import { AuthService } from './services/auth.service';
 import { LoginComponent } from './components/login/login.component';
+import { ProfileComponent } from './components/profile/profile.component';
 
 
 @NgModule({
@@ -25,7 +24,8 @@ import { LoginComponent } from './components/login/login.component';
     HomeComponent,
     DashboardComponent,
     RegisterComponent,
-    LoginComponent
+    LoginComponent,
+    ProfileComponent
   ],
   imports: [
     BrowserModule,

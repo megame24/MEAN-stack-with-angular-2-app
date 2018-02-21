@@ -90,7 +90,7 @@ userSchema.pre('save', function(next){
   });
 });
 
-userSchema.methods.verifyPassword = (password) => {
+userSchema.methods.verifyPassword = function(password) {
   return bcrypt.compareSync(password, this.password);
 }
 
