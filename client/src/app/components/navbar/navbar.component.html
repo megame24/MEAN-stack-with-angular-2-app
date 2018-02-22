@@ -15,12 +15,12 @@
         <li routerLinkActive="active"><a routerLink="/home" >Home</a></li>
       </ul>
       <ul class="nav navbar-nav navbar-right">
-        <li routerLinkActive="active"><a routerLink="/dashboard">Dashboard</a></li>
-        <li routerLinkActive="active"><a routerLink="/profile">Profile</a></li>
-        <li><a href="#contact">Blog</a></li>
-        <li routerLinkActive="active"><a routerLink="/login">Login</a></li>
-        <li><a href="#contact">Logout</a></li>
-        <li routerLinkActive="active"><a routerLink="/register">Register</a></li>
+        <li *ngIf="authService.loggedIn()" routerLinkActive="active"><a routerLink="/dashboard">Dashboard</a></li>
+        <li *ngIf="authService.loggedIn()" routerLinkActive="active"><a routerLink="/profile">Profile</a></li>
+        <li *ngIf="authService.loggedIn()"><a href="#contact">Blog</a></li>
+        <li *ngIf="!authService.loggedIn()" routerLinkActive="active"><a routerLink="/login">Login</a></li>
+        <li *ngIf="authService.loggedIn()"><a href="#" (click)="onLogoutClick()">Logout</a></li>
+        <li *ngIf="!authService.loggedIn()" routerLinkActive="active"><a routerLink="/register">Register</a></li>
       </ul>
     </div>
     <!--/.nav-collapse -->
