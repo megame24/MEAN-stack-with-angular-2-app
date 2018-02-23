@@ -4,6 +4,8 @@ import { HttpModule } from '@angular/http';
 import { ReactiveFormsModule } from '@angular/forms';
 import { AppRoutingModule } from './app-routing-module';
 import { FlashMessageModule } from 'angular-flash-message';
+import { AuthGuard } from './guards/auth.guard';
+import { NotAuthGuard } from './guards/notAuth.guard';
 // import * as $ from 'jquery'; //copy into required component.ts and get the ts*type for jquery on line
 // import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
@@ -36,7 +38,7 @@ import { ProfileComponent } from './components/profile/profile.component';
     FlashMessageModule
     // NgbModule.forRoot()
   ],
-  providers: [AuthService],
+  providers: [AuthService, AuthGuard, NotAuthGuard],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
